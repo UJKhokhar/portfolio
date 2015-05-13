@@ -4,3 +4,4 @@
 <h4><%= link_to 'View on Github', @work.github %></h4>
 <h4><%= @work.uri %></h4>
 <p><%= @work.description %></p>
+<%= image_tag(@work.screenshots.normal_size.url) if @work.screenshots? %>
