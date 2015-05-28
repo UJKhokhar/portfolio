@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+<div class='container'>
+  <div class='row header'>
+    <div class='uk-logo'>
+      <a href=''><img src='https://s3.amazonaws.com/ujk-portfolio-development/uploads/other/uk-logo.svg'></a>
+    </div>
+    <div class='uk-info'>
+      <h1>Designer / Developer</h1>
+      <ul class='uk-links'>
+        <li><a href='/'>Work</a></li>
+        <li><a href='#'>Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <% if flash[:notice] %>
+    <div class="alert alert-success">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <%= flash[:notice] %>
+    </div>
+  <% elsif flash[:error] %>
+    <div class="alert alert-danger">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <%= flash[:error] %>
+    </div>
+  <% elsif flash[:alert] %>
+    <div class="alert alert-warning">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
 <%= yield %>
-
+</div>
 </body>
 </html>

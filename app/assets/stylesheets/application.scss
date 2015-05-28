@@ -1,4 +1,71 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "variables";
+@import "mixins";
 @import "welcome";
+@import "works";
+
+
+body {
+  background-color: $white;
+  @media (max-width: 991px) {
+    padding-left: 20px;
+    padding-right: 20px; 
+  }
+}
+
+.header {
+  margin: 0 10px 30px 10px;
+  padding: 30px 0;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.uk-logo {
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  @media (max-width: 991px) {
+    display: block;
+    margin: 0 auto;
+  } 
+
+  img {
+    width: 100%;
+  }
+}
+
+.uk-info {
+  margin-top: 20px;
+  float: right;
+  @media (max-width: 991px) {
+    float: none;
+    text-align: center;
+  }
+  h1 {
+    font-size: 30px;
+  }
+
+  .uk-links {
+    float: right;
+    list-style-type: none;
+    @media (max-width: 991px) {
+      float: none;
+      text-align: center;
+      padding: 0px;
+    }
+
+    li {
+      display: inline-block;
+    }
+
+    li:last-child {
+      margin-left: 15px;
+    }
+
+    a {
+      color: #5289eb;
+      text-decoration: none;
+      font-size: 16px;
+    }
+  }
+}
