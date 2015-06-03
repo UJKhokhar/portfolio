@@ -1,4 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "variables";
+@import "mixins";
 @import "welcome";
+@import "works";
+
+
+body {
+  background-color: $iron;
+}

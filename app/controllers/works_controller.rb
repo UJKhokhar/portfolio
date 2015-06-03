@@ -11,6 +11,9 @@ class WorksController < ApplicationController
     @work = Work.new(work_params)
     if @work.save
       redirect_to @work
+    else
+      flash[:error] = "Error saving work."
+      redirect_to :root
     end
   end
 
@@ -23,7 +26,7 @@ class WorksController < ApplicationController
     if @work.update_attributes(work_params)
       redirect_to @work
     else 
-      flash[:error] = "Error saving topic. Please try again."
+      flash[:error] = "Error saving work. Please try again."
       render :edit
     end
   end
