@@ -5,9 +5,9 @@
 @import "welcome";
 @import "works";
 
-
 body {
   background-color: $white;
+  color: #404040;
   @media (max-width: 991px) {
     padding-left: 20px;
     padding-right: 20px; 
@@ -15,16 +15,19 @@ body {
 }
 
 .header {
-  margin: 0 10px 30px 10px;
+  margin: 0 10px 0px 10px;
   padding: 30px 0;
   border-bottom: 1px solid #d3d3d3;
+  overflow: hidden;
 }
 
 .uk-logo {
   height: 100px;
   width: 100px;
   display: inline-block;
+  float: left;
   @media (max-width: 991px) {
+    float: none;
     display: block;
     margin: 0 auto;
   } 
@@ -36,18 +39,27 @@ body {
 
 .uk-info {
   margin-top: 20px;
-  float: right;
+  @media (min-width: 1200px) {
+    float: right;
+  }
+  @media (min-width: 992px) and (max-width: 1200px) {
+    float: right;
+  }
   @media (max-width: 991px) {
     float: none;
     text-align: center;
   }
   h1 {
     font-size: 30px;
+    @media (max-width: 991px) {
+      font-size: 25px;
+    }
   }
 
   .uk-links {
-    float: right;
     list-style-type: none;
+    margin-top: 8px;
+    padding: 0px;
     @media (max-width: 991px) {
       float: none;
       text-align: center;
@@ -68,4 +80,9 @@ body {
       font-size: 16px;
     }
   }
+}
+
+.footer {
+  border-top: 1px solid #d3d3d3;
+  padding: 20px 0;
 }

@@ -21,7 +21,6 @@
       </ul>
     </div>
   </div>
-  
   <% if flash[:notice] %>
     <div class="alert alert-success">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -38,7 +37,12 @@
       <%= flash[:alert] %>
     </div>
   <% end %>
-<%= yield %>
+  <%= yield %>
+  <div class='footer'>
+    <footer>
+      <p>Umar Khokhar</p>
+    </footer>
+  </div>
 </div>
 </body>
 </html>
