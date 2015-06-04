@@ -4,7 +4,7 @@ module ApplicationHelper
     works.each_slice(4).map do |group|
       content_tag :div, class: 'row' do
         group.map do |work|
-          content_tag :div, class: 'work-col col-lg-3 col-md-6 col-xs-12 ' do
+          content_tag :div, class: 'work-col col-lg-3 col-md-6 col-xs-12' do
             link_to "/works/#{work.id}" do
               image_tag("https://ujk-portfolio-development.s3.amazonaws.com/uploads/work/#{work.name}/#{work.name}.svg", class: 'work-img')
             end
