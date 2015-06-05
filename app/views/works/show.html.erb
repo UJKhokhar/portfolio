@@ -6,10 +6,10 @@
   <p class='work-description'><%= @work.description %></p>
   <% if @work.github || @work.uri %>
     <ul class='work-links'>
-      <% if @work.github %>
+      <% if @work.github? %>
         <li><%= link_to 'View the code', @work.github %></li>
       <% end %>
-      <% if @work.uri %> 
+      <% if @work.uri? %> 
         <li><%= link_to 'View the site', @work.uri %></li>
       <% end %>
     </ul>
