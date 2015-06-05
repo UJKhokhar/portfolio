@@ -1,9 +1,24 @@
 <div class='work-info'>
-  <h1><%= @work.name %></h1>
-  <h2><%= @work.role %></h2>
-  <h3><%= @work.technologies %></h3>
-  <h4><%= link_to 'View on Github', @work.github %></h4>
-  <h4><%= @work.uri %></h4>
-  <p class='work-description'><%= @work.description %></p>
+  <h1 class='work-name'><%= @work.name %></h1>
+  <h4 class='work-type'><%= "#{@work.role} | #{@work.technologies}" %></h4>
 </div>
-<%= image_tag(@work.screenshots.normal_size.url, class: 'work-screenshot') if @work.screenshots? %>
+<div class='work-side'>
+  <p class='work-description'><%= @work.description %></p>
+  <% if @work.github || @work.uri %>
+    <ul class='work-links'>
+      <% if @work.github %>
+        <li><%= link_to 'View the code', @work.github %></li>
+      <% end %>
+      <% if @work.uri %> 
+        <li><%= link_to 'View the site', @work.uri %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+<div class='work-images'>
+  <% if @work.screenshots? %>
+    <%= image_tag(@work.screenshots.url) %>
+  <% else %>
+    <%= image_tag("https://ujk-portfolio-development.s3.amazonaws.com/uploads/work/#{@work.name}/#{@work.name}.svg") %>
+  <% end %>
+</div>
