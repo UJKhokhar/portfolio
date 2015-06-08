@@ -9,13 +9,13 @@ body {
   background-color: $white;
   color: #404040;
   @media (max-width: 991px) {
-    padding-left: 20px;
-    padding-right: 20px; 
+    padding-left: 15px;
+    padding-right: 15px; 
   }
 }
 
 .header {
-  margin: 0 10px 0px 10px;
+  margin: 0 5px 0px 5px;
   padding: 30px 0;
   border-bottom: 1px solid #d3d3d3;
   overflow: hidden;
@@ -56,33 +56,34 @@ body {
     }
   }
 
-  .uk-links {
-    list-style-type: none;
-    margin-top: 8px;
+.uk-links {
+  list-style-type: none;
+  margin-top: 8px;
+  padding: 0px;
+  @media (max-width: 991px) {
+    float: none;
+    text-align: center;
     padding: 0px;
-    @media (max-width: 991px) {
-      float: none;
-      text-align: center;
-      padding: 0px;
-    }
+  }
 
-    li {
-      display: inline-block;
-    }
+  li {
+    display: inline-block;
+  }
 
-    li:last-child {
-      margin-left: 15px;
-    }
+  li:last-child {
+    margin-left: 15px;
+  }
 
-    a {
-      color: #5289eb;
-      text-decoration: none;
-      font-size: 16px;
+  a {
+    color: #5289eb;
+    text-decoration: none;
+    font-size: 16px;
     }
   }
 }
 
 .footer {
   border-top: 1px solid #d3d3d3;
+  margin: 0 5px;
   padding: 20px 0;
 }
