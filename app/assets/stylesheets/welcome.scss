@@ -11,9 +11,14 @@
     margin:0 0 10px 0;
   }
 }
-
 .works-container {
-  padding:10px 0 0 0;
+  padding: 95px 30px;
+  @media (min-width: 992px) and (max-width: 1200px) {
+    padding: 30px 30px;
+  }
+  @media (max-width: 991px) {
+    padding: 15px 0px;
+  }
 }
 
 .work-col {

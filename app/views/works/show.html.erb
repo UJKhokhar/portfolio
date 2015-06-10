@@ -22,5 +22,8 @@
     <% else %>
       <%= image_tag("https://ujk-portfolio-development.s3.amazonaws.com/uploads/work/#{@work.name}/#{@work.name}.svg") %>
     <% end %>
+    <% if @work.name == 'the-last-coffee-bar' %>
+      <%= image_tag("https://ujk-portfolio-development.s3.amazonaws.com/uploads/work/#{@work.name}/#{@work.name}-mobile.jpg") %>
+    <% end %>
   </div>
 </div>

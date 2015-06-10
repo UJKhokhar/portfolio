@@ -2,6 +2,7 @@
   padding: 0 5px;
 }
 
+
 .work-info {
   width: 100%;
   margin: 20px 0;
@@ -23,6 +24,7 @@
     float: right;
     margin-bottom: 30px;
     max-width: 350px;
+    width: 37%
   }
   ul {
     padding: 0px;
@@ -35,7 +37,6 @@
   }
   .work-links li{
     @media (max-width: 991px) {
-      display: inline;
       margin-right: 15px;
     }
   }

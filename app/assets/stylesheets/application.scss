@@ -8,9 +8,22 @@
 body {
   background-color: $white;
   color: #404040;
+  margin: 15px;
+  border: 015px solid #404040;
   @media (max-width: 991px) {
     padding-left: 15px;
-    padding-right: 15px; 
+    padding-right: 15px;
+  }
+}
+
+.container {
+  width: 100%;
+  margin: 10px 0 5px 0;
+  padding: 0 20px;
+  @media (max-width: 991px) {
+    margin: 15px 0;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
@@ -70,7 +83,7 @@ body {
     display: inline-block;
   }
 
-  li:last-child {
+  li:not(:first-child) {
     margin-left: 15px;
   }
 
